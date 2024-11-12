@@ -2,8 +2,7 @@
 
 # 🎨 Theming for [Appwrite](https://appwrite.io/)
 
-Want to personalize your Appwrite instance without diving into the source code? I created a CSS file that can be injected server-side to style your Appwrite console in line with your brand, with no need to recompile every update.
-
+Want to personalize your Appwrite instance without diving into the source code? I created a CSS file that can be injected server-side to style your Appwrite console in line with your brand.
 ![Screenshot](https://tommy141x.github.io/appwrite-theming/mockups/cyan.png)
 
 ---
