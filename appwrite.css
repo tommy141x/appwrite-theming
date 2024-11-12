@@ -1,7 +1,8 @@
-/* Appwrite Custom Styling - by Tommy Johnston */
+/* Appwrite Custom Styling - by Tommy Johnston (www.tommy-johnston.com) */
 
 /*
-Usage Example:
+Usage Example (Nginx Config):
+
 proxy_set_header Accept-Encoding "";
 sub_filter '</head>' '<style>:root {
 
@@ -15,10 +16,9 @@ sub_filter '</head>' '<style>:root {
 
 --logo-image: url("https://api.timmygstudios.com/v1/storage/buckets/images/files/logo/view?project=tore");
 
-}</style><link rel="stylesheet" type="text/css" href=""></head>';
+}</style><link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/tommy141x/appwrite-theming/refs/heads/main/appwrite.css"></head>';
 sub_filter_once on;
 sub_filter_types text/html;
-
 */
 
 :root {
