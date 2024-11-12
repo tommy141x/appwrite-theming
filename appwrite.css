@@ -15,25 +15,14 @@ sub_filter '</head>' '<style>:root {
 --background-color-brightness: 55%;
 
 --logo-image: url("https://api.timmygstudios.com/v1/storage/buckets/images/files/logo/view?project=tore");
+--background-image: url("https://api.timmygstudios.com/v1/storage/buckets/images/files/dev09242024header/view?project=tore");
 
-}</style><link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/tommy141x/appwrite-theming/refs/heads/main/appwrite.css"></head>';
+}</style><link rel="stylesheet" type="text/css" href="https://tommy141x.github.io/appwrite-theming/appwrite.css"></head>';
 sub_filter_once on;
 sub_filter_types text/html;
 */
 
 :root {
-    /* Root Configurable Variables (to be provided)
-    --primary-color-hue: 205deg;
-    --primary-color-saturation: 100%;
-    --primary-color-brightness: 55%;
-
-    --background-color-hue: 0;
-    --background-color-saturation: 0%;
-    --background-color-brightness: 55%;
-
-    --logo-image: url("https://api.timmygstudios.com/v1/storage/buckets/images/files/logo/view?project=tore");
-    */
-
     /* Pink UI Kit Colors */
 
     /* Primary Colors - Auto-generated */
@@ -125,12 +114,35 @@ img[alt="Appwrite Logo"] {
     width: auto;
 }
 
+/* Background Image */
+section.u-flex.u-flex-vertical.side-default {
+    background-image: var(--background-image);
+    z-index: -1 !important;
+}
+
+/* Tagline Gradient */
+div.tag-line {
+    background: linear-gradient(45deg, #fff, #fff 60%, #000000) !important;
+    background-clip: text !important;
+}
+
+/* Underscore Color */
+span.underscore {
+    -webkit-text-fill-color: hsl(var(--color-primary-100)) !important;
+}
+
+/* Loading Spinner */
+.animation > div {
+    border-color: hsl(var(--color-primary-100)) transparent transparent
+        transparent !important;
+}
+
 /* Color for Bar Graphs */
 path[fill="#F02E65"] {
     fill: hsl(var(--color-primary-300)) !important;
 }
 
-/* Hover Color */
+/* Hover Color for Bar Graphs */
 .echart svg g path:not([fill="transparent"]) {
     fill: hsl(var(--color-primary-100));
 }
@@ -140,7 +152,7 @@ path[stroke="#F02E65"] {
     stroke: hsl(var(--color-primary-300)) !important;
 }
 
-/* Hover Color & Regular Styling */
+/* Hover Color for Line Graphs & Regular Styling */
 .echart > div > svg > g > g > path {
     stroke: hsl(var(--color-primary-100));
     filter: none;
@@ -158,18 +170,15 @@ div[style*="z-index: 9999999"][style*="position: absolute"][style*="pointer-even
     border: none !important;
 }
 
-.animation > div {
-    border-color: hsl(var(--color-primary-100)) transparent transparent
-        transparent !important;
-}
-
+/* Appwrite Guide Images */
 img[alt="create"] {
     filter: hue-rotate(calc(var(--primary-color-hue) + 15deg))
         brightness(calc(var(--primary-color-brightness) + 45%))
         saturate(var(--primary-color-saturation));
 }
 
-img.avatar {
+/* User Avatar Coloring */
+button.user-profile-button > img.avatar {
     background-color: hsl(var(--color-neutral-105)) !important;
     filter: hue-rotate(calc(var(--primary-color-hue) + 125deg))
         brightness(calc(var(--primary-color-brightness) + 40%))
