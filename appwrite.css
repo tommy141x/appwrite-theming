@@ -1,0 +1,177 @@
+/* Appwrite Custom Styling - by Tommy Johnston */
+
+/*
+Usage Example:
+proxy_set_header Accept-Encoding "";
+sub_filter '</head>' '<style>:root {
+
+--primary-color-hue: 205deg;
+--primary-color-saturation: 100%;
+--primary-color-brightness: 55%;
+
+--background-color-hue: 0;
+--background-color-saturation: 0%;
+--background-color-brightness: 55%;
+
+--logo-image: url("https://api.timmygstudios.com/v1/storage/buckets/images/files/logo/view?project=tore");
+
+}</style><link rel="stylesheet" type="text/css" href=""></head>';
+sub_filter_once on;
+sub_filter_types text/html;
+
+*/
+
+:root {
+    /* Root Configurable Variables (to be provided)
+    --primary-color-hue: 205deg;
+    --primary-color-saturation: 100%;
+    --primary-color-brightness: 55%;
+
+    --background-color-hue: 0;
+    --background-color-saturation: 0%;
+    --background-color-brightness: 55%;
+
+    --logo-image: url("https://api.timmygstudios.com/v1/storage/buckets/images/files/logo/view?project=tore");
+    */
+
+    /* Pink UI Kit Colors */
+
+    /* Primary Colors - Auto-generated */
+    --color-primary-100: var(--primary-color-hue),
+        var(--primary-color-saturation),
+        calc(var(--primary-color-brightness) - 14%);
+    --color-primary-200: var(--primary-color-hue),
+        var(--primary-color-saturation),
+        calc(var(--primary-color-brightness) - 20%);
+    --color-primary-300: var(--primary-color-hue),
+        var(--primary-color-saturation),
+        calc(var(--primary-color-brightness) - 25%);
+
+    /* Neutral Colors - Auto-generated */
+    --color-neutral-0: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 50%);
+    --color-neutral-5: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 45%);
+    --color-neutral-10: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 40%);
+    --color-neutral-15: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 35%);
+    --color-neutral-20: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 30%);
+    --color-neutral-25: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 25%);
+    --color-neutral-30: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 20%);
+    --color-neutral-35: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 15%);
+    --color-neutral-40: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 10%);
+    --color-neutral-45: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 5%);
+    --color-neutral-50: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) + 0%);
+    --color-neutral-55: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 5%);
+    --color-neutral-60: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 10%);
+    --color-neutral-65: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 15%);
+    --color-neutral-70: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 20%);
+    --color-neutral-75: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 25%);
+    --color-neutral-80: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 30%);
+    --color-neutral-85: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 35%);
+    --color-neutral-90: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 40%);
+    --color-neutral-95: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 45%);
+    --color-neutral-100: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 47.5%);
+    --color-neutral-105: var(--background-color-hue)
+        var(--background-color-saturation)
+        calc(var(--background-color-brightness) - 50%);
+}
+
+/* Logo Image */
+img[alt="Appwrite"],
+.logo-dark img,
+.logo-light img,
+img[alt="Appwrite Logo"] {
+    content: var(--logo-image);
+    width: auto;
+}
+
+/* Color for Bar Graphs */
+path[fill="#F02E65"] {
+    fill: hsl(var(--color-primary-300)) !important;
+}
+
+/* Hover Color */
+.echart svg g path:not([fill="transparent"]) {
+    fill: hsl(var(--color-primary-100));
+}
+
+/* Color for Line Graphs */
+path[stroke="#F02E65"] {
+    stroke: hsl(var(--color-primary-300)) !important;
+}
+
+/* Hover Color & Regular Styling */
+.echart > div > svg > g > g > path {
+    stroke: hsl(var(--color-primary-100));
+    filter: none;
+    fill: hsla(var(--color-primary-100), 0.1);
+}
+
+/* Shape Colors */
+*[style*="background-color:#F02E65"] {
+    background-color: hsl(var(--color-primary-100)) !important;
+}
+
+/* Hover Div Background Color */
+div[style*="z-index: 9999999"][style*="position: absolute"][style*="pointer-events: none"] {
+    background-color: hsl(var(--color-neutral-95)) !important;
+    border: none !important;
+}
+
+.animation > div {
+    border-color: hsl(var(--color-primary-100)) transparent transparent
+        transparent !important;
+}
+
+img[alt="create"] {
+    filter: hue-rotate(calc(var(--primary-color-hue) + 15deg))
+        brightness(calc(var(--primary-color-brightness) + 45%))
+        saturate(var(--primary-color-saturation));
+}
+
+img.avatar {
+    background-color: hsl(var(--color-neutral-105)) !important;
+    filter: hue-rotate(calc(var(--primary-color-hue) + 125deg))
+        brightness(calc(var(--primary-color-brightness) + 40%))
+        saturate(var(--primary-color-saturation));
+}
