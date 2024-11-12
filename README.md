@@ -22,7 +22,7 @@ sub_filter '</head>' '<style>:root {
   --primary-color-saturation: 100%;
   --primary-color-brightness: 55%;
 
-  --background-color-hue: 0;
+  --background-color-hue: 0deg;
   --background-color-saturation: 0%;
   --background-color-brightness: 55%;
 
