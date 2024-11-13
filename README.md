@@ -15,23 +15,23 @@ To apply the theme, add the following snippet inside the `location` block for th
 
 ```nginx
 proxy_set_header Accept-Encoding "";
-sub_filter '</head>' '<style>:root {
-
-  --primary-color-hue: 205deg;
-  --primary-color-saturation: 100%;
-  --primary-color-brightness: 55%;
-
-  --background-color-hue: 0deg;
-  --background-color-saturation: 0%;
-  --background-color-brightness: 55%;
-
-  --logo-image: url("https://api.timmygstudios.com/v1/storage/buckets/images/files/logo/view?project=tore");
-  --background-image: url("https://api.timmygstudios.com/v1/storage/buckets/images/files/dev09242024header/view?project=tore");
-
-}</style><link rel="stylesheet" type="text/css" href="https://tommy141x.github.io/appwrite-theming/appwrite.css"></head>';
-sub_filter_once on;
-sub_filter_types text/html;
-
+    sub_filter '</head>' '
+        <style>
+            :root {
+                --primary-color-hue: 205deg;
+                --primary-color-saturation: 100%;
+                --primary-color-brightness: 55%;
+                --background-color-hue: 0;
+                --background-color-saturation: 0%;
+                --background-color-brightness: 55%;
+                --logo-image: url("https://api.timmygstudios.com/v1/storage/buckets/images/files/logo/view?project=tore");
+                --background-image: url("https://api.timmygstudios.com/v1/storage/buckets/images/files/dev09242024header/view?project=tore");
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="https://tommy141x.github.io/appwrite-theming/appwrite.css">
+    </head>';
+    sub_filter_once on;
+    sub_filter_types text/html;
 ```
 Customize ``--primary-color``, ``--background-color``, ``--logo-image``, and ``--background-image`` to match your liking (background image appears on the authentication screen).
 
